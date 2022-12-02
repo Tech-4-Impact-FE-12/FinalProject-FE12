@@ -4,10 +4,9 @@
 
 Tim FEBE-12 mendapatkan Challenge Partner dari Greenpeace yang merupakan sebuah organisasi non-profit yang bergerak di bidang lingkungan hidup dan hak asasi manusia untuk membuat sebuah website yang dapat membantu mereka menyelesaikan masalah dan isu permasalahan lainnya. Dari challenge tersebut maka kami membuat website bernama MyNature
 
-![Screenshot 1](https://i.ibb.co/C6syXtX/Screenshot-2022-11-20-155432.jpg)
+![Screenshot 1](https://i.ibb.co/n6Kb1G0/Screenshot-2022-12-02-234039.jpg)
 
-
-![Screenshot 2](https://i.ibb.co/fFrHCKr/Screenshot-2022-11-20-155517.jpg)
+![Screenshot 2](https://i.ibb.co/C7sZm8y/Screenshot-2022-12-02-234126.jpg)
 
 ### Production
 [https://mynaturefebe-12.netlify.app/](https://mynaturefebe-12.netlify.app/)
@@ -16,14 +15,14 @@ Tim FEBE-12 mendapatkan Challenge Partner dari Greenpeace yang merupakan sebuah 
 ### Design
 
 - Mockup : [Mockup Link](https://www.figma.com/file/DYlnrmaQHc4yeqTVaoMVBO/Final-Design-FEBE-12?node-id=520%3A72)
-- Wireframes (Whimsical) : [Wireframes Link](https://whimsical.com/wireframe-LYWzf66bynBKHRczt44ELs)
+- Wireframes (Whimsical) : [Wireframes Link](https://whimsical.com/wireframe-KxP6N9tcbt3adyeHSZcrmw)
 
 ## User Features
 
+- Register Login
 - Home Page
 - Artikel
 - About
-- Contact
 
 ## Admin Features
 - Create
