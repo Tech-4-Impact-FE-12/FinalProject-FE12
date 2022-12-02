@@ -52,7 +52,7 @@ const About = () => {
           <div id="team-card" className="row gy-4 text-center">
             <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
               <div className="member">
-                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991702/avatar/sheha_n8s6es.png" className="img-fluid" alt="" />
+                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991589/avatar/Donita_okcpfv.jpg" className="img-fluid" alt="" />
                 <h4>Donita Primi</h4>
                 <span>Front-End Development</span>
                 <div className="social">
