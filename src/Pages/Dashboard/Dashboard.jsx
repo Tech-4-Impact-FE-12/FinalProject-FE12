@@ -4,6 +4,7 @@ import { RiAddFill } from "react-icons/ri";
 import { BiEdit, BiTrashAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function Dashboard() {
   const [activity, setActivity] = useState([]);
@@ -23,8 +24,23 @@ function Dashboard() {
 
   // const token = sessionStorage.getItem("token")
   const deleteActivity = async (_id) => {
-  console.log("cek");
-  
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
     try {
       const token = sessionStorage.getItem("token");
       await axios.delete(`https://be12-production.up.railway.app/kegiatan/delete/${_id}`, {headers:{Authorization: token}});

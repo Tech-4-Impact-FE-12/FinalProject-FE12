@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { postKegiatan } from '../../Redux/Actions/kegiatanAction';
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 // import { postKegiatan } from './Redux/Actions/kegiatanAction';
 import "./AddActivity.css";
 
 function AddActivity() {
 
+  const navigate = useNavigate();
   const dispatch = useDispatch()
   const [img_kegiatan, setImg] = useState("");
   const [judul_kegiatan, setJudul] = useState("");
@@ -35,7 +38,13 @@ function AddActivity() {
     e.preventDefault()
     const token = sessionStorage.getItem("token")
     dispatch(postKegiatan(data, token))
-    alert("berhasil post event")
+    Swal.fire({
+      icon: "success",
+      title: "Tambah Data Success",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    navigate("/dashboard");
     reset()
   }
   

@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { editKegiatan } from '../../Redux/Actions/kegiatanAction';
+import Swal from "sweetalert2";
 
 const EditActivity = () => {
 
-  
+  const navigate = useNavigate();
   const dispatch = useDispatch()
   const [img_kegiatan, setImg] = useState("");
   const [judul_kegiatan, setJudul] = useState("");
@@ -49,8 +50,25 @@ const EditActivity = () => {
   function handlepostkegiatan(e) {
     e.preventDefault()
     const token = sessionStorage.getItem("token")
+    Swal.fire({
+      title: 'Are you sure to edit?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, edit it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Edited!',
+          'Your file has been edited.',
+          'success'
+        )
+      }
+    })
     dispatch(editKegiatan(id,data, token))
-    alert("berhasil post event")
+    navigate("/dashboard");
     reset()
   }
   
