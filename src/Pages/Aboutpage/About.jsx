@@ -52,7 +52,7 @@ const About = () => {
           <div id="team-card" className="row gy-4 text-center">
             <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
               <div className="member">
-                <img src="https://i.pinimg.com/originals/22/f2/3d/22f23da7fc6822bd30102d525b653165.jpg" className="img-fluid" alt="" />
+                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991702/avatar/sheha_n8s6es.png" className="img-fluid" alt="" />
                 <h4>Donita Primi</h4>
                 <span>Front-End Development</span>
                 <div className="social">
@@ -96,7 +96,7 @@ const About = () => {
 
             <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
               <div className="member">
-                <img src="https://ftw.usatoday.com/wp-content/uploads/sites/90/2017/05/spongebob.jpg?w=1000&h=600&crop=1" className="img-fluid" alt="" />
+                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991594/avatar/PotoReza_bvjkze.jpg" className="img-fluid" alt="" />
                 <h4>Reza Saputra</h4>
                 <span>Front-End Development</span>
                 <div className="social">
@@ -120,7 +120,7 @@ const About = () => {
           <div id="team-card" className="row mt-3 gy-4 text-center">
             <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
               <div className="member">
-                <img src="https://i.pinimg.com/originals/22/f2/3d/22f23da7fc6822bd30102d525b653165.jpg" className="img-fluid" alt="" />
+                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991702/avatar/sheha_n8s6es.png" className="img-fluid" alt="" />
                 <h4>Sheha Luthfi</h4>
                 <span>Back-End Development</span>
                 <div className="social">
@@ -142,7 +142,7 @@ const About = () => {
 
             <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
               <div className="member">
-                <img src="https://i.kym-cdn.com/entries/icons/original/000/009/803/spongebob-squarepants-patrick-spongebob-patrick-star-background-225039.jpg" className="img-fluid" alt="" />
+                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991591/avatar/fanuel_cechac.jpg" className="img-fluid" alt="" />
                 <h4>Fanuel Ari</h4>
                 <span>Back-End Development</span>
                 <div className="social">
@@ -164,7 +164,7 @@ const About = () => {
 
             <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
               <div className="member">
-                <img src="https://ftw.usatoday.com/wp-content/uploads/sites/90/2017/05/spongebob.jpg?w=1000&h=600&crop=1" className="img-fluid" alt="" />
+                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991592/avatar/foto_saya_etn3rh.jpg" className="img-fluid" alt="" />
                 <h4>Dustin Bayu</h4>
                 <span>Back-End Development</span>
                 <div className="social">
