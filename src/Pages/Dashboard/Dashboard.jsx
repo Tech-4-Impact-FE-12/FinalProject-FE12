@@ -7,6 +7,7 @@ import axios from "axios";
 
 function Dashboard() {
   const [activity, setActivity] = useState([]);
+  
 
   useEffect(() => {
     (async () => {
@@ -14,9 +15,23 @@ function Dashboard() {
     })();
   }, []);
 
+  
   const getActivity = async () => {
-    const response = await axios.get("https://coba2-production.up.railway.app/kegiatan");
+    const response = await axios.get("https://be12-production.up.railway.app/AllKegiatan");
     setActivity(response?.data.data || []);
+  };
+
+  // const token = sessionStorage.getItem("token")
+  const deleteActivity = async (_id) => {
+  console.log("cek");
+  
+    try {
+      const token = sessionStorage.getItem("token");
+      await axios.delete(`https://be12-production.up.railway.app/kegiatan/delete/${_id}`, {headers:{Authorization: token}});
+      getActivity();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -57,8 +72,10 @@ function Dashboard() {
                       <td>{item.judul_kegiatan}</td>
                       <td>{item.tgl_kegiatan}</td>
                       <td className="text-end">
-                        <BiEdit size={24} color="#1B5457" className="actionButton" />
-                        <BiTrashAlt size={24} color="#CF2A2A" className="actionButton" />
+                      <Link to={`/EditActivity/${item._id}`}>
+                          <BiEdit size={24} color="#1B5457" className="actionButton" />
+                        </Link>
+                        <BiTrashAlt onClick={() => deleteActivity(item._id)} size={24} color="#CF2A2A" className="actionButton" />
                       </td>
                     </tr>
                   ))}

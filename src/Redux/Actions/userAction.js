@@ -33,23 +33,23 @@ export const postSignInSuccess = (user) => {
   };
 };
 
-export const postActivity = (user) => {
-  return {
-    type: ACTIVITY,
-    user,
-  };
-};
+// export const postActivity = (user) => {
+//   return {
+//     type: ACTIVITY,
+//     user,
+//   };
+// };
 
 export const signUp = (user) => {
   return async (dispatch) => {
-    const response = await axios.post("https://febe12be-production.up.railway.app/signup", user);
+    const response = await axios.post("https://be12-production.up.railway.app/signup", user);
     dispatch(postSignUpSuccess(response.data));
   };
 };
 
 export const signIn = (user) => {
   return async (dispatch) => {
-    const response = await axios.post("https://febe12be-production.up.railway.app/signin", user);
+    const response = await axios.post("https://be12-production.up.railway.app/signin", user);
     dispatch(postSignInSuccess(response.data));
   };
 };

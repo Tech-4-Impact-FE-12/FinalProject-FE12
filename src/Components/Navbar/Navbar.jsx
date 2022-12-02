@@ -10,6 +10,8 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
 import "./Navbar.css";
 import AddActivity from "../../Pages/Dashboard/AddActivity";
+import EditActivity from "../../Pages/Dashboard/EditActivity";
+import Detail from "../../Pages/Activitypage/Detail";
 
 const Navbar = () => {
   const [isAdmin, setIsAdmin] = useState(sessionStorage.getItem("status") || "user");
@@ -77,6 +79,8 @@ const Navbar = () => {
         <Route path="/register" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/addactivity" element={<AddActivity />} />
+        <Route path="/editactivity/:id" element={<EditActivity />} />
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
     </>
   );

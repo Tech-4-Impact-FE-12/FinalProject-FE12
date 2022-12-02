@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Kegiatan.css";
+import { Link } from "react-router-dom";
 
 const Kegiatan = () => {
   const [activity, setActivity] = useState([]);
@@ -12,9 +13,12 @@ const Kegiatan = () => {
   }, []);
 
   const getActivity = async () => {
-    const response = await axios.get("https://coba2-production.up.railway.app/kegiatan");
+    const response = await axios.get("https://be12-production.up.railway.app/AllKegiatan");
     setActivity(response?.data.data || []);
   };
+
+
+
 
   return (
     <>
@@ -33,7 +37,9 @@ const Kegiatan = () => {
                   <div className="col-sm leftContent text-end">
                     <h4 className="">{item.judul_kegiatan}</h4>
                     <div className="buttonKegiatan">
+                    <Link to={`/detail/${item._id}`}>
                       <button className="buttonCard">Lihat Kegiatan</button>
+                      </Link>
                     </div>
                   </div>
                 </div>

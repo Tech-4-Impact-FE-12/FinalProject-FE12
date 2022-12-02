@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { postKegiatan } from '../../Redux/Actions/kegiatanAction';
-// import { postKegiatan } from './Redux/Actions/kegiatanAction';
-import "./AddActivity.css";
+import { useParams } from 'react-router-dom';
+import { editKegiatan } from '../../Redux/Actions/kegiatanAction';
 
-function AddActivity() {
+const EditActivity = () => {
 
+  
   const dispatch = useDispatch()
   const [img_kegiatan, setImg] = useState("");
   const [judul_kegiatan, setJudul] = useState("");
   const [tgl_kegiatan, setTgl] = useState("");
   const [lokasi_kegiatan, setLokasi] = useState("");
   const [deskripsi, setDesc] = useState("");
+  const { id } = useParams();
   // const navigate = useNavigate();
 
   const data = {
@@ -30,18 +32,31 @@ function AddActivity() {
     setTgl ("")
   }
 
+  useEffect(() => {
+    (async () => {
+    const activity = await axios.get("https://be12-production.up.railway.app/AllKegiatan")
+    console.log(activity);
+    const selected = (activity?.data?.data || []).find((a) => a._id === id); 
+    setImg (selected.img_kegiatan)
+    setDesc (selected.deskripsi)
+    setLokasi (selected.lokasi_kegiatan)
+    setTgl (selected.tgl_kegiatan)
+    setJudul (selected.judul_kegiatan)
+
+    })();
+  }, []);
 
   function handlepostkegiatan(e) {
     e.preventDefault()
     const token = sessionStorage.getItem("token")
-    dispatch(postKegiatan(data, token))
+    dispatch(editKegiatan(id,data, token))
     alert("berhasil post event")
     reset()
   }
   
 
-
   return (
+    <>
     <div className="bgFormAdd">
       <div className="containerCard d-flex justify-content-center">
         <div className="card" style={{ width: "40rem", borderRadius: "20px", backgroundColor: "#ffff" }}>
@@ -55,7 +70,7 @@ function AddActivity() {
           </div>
 
           <div className="formAdd d-flex justify-content-center">
-          <form style={{ width: "30rem" }} onSubmit={handlepostkegiatan}>
+            <form style={{ width: "30rem" }} onSubmit={handlepostkegiatan}>
               <div className="form-group">
                 <label>Gambar Kegiatan</label>
                 <input type="url" className="input form-control" value={img_kegiatan} onChange={(e) => setImg(e.target.value)} placeholder="Masukkan Link Gambar" />
@@ -78,7 +93,7 @@ function AddActivity() {
               </div>
               <div className="btnAddAct form-group">
                 <button type="submit" className="btn btn-addAct">
-                  Tambah
+                  Update
                 </button>
               </div>
             </form>
@@ -86,7 +101,8 @@ function AddActivity() {
         </div>
       </div>
     </div>
-  );
+    </>
+  )
 }
 
-export default AddActivity;
+export default EditActivity
