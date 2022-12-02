@@ -74,7 +74,7 @@ const About = () => {
 
             <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
               <div className="member">
-                <img src="https://i.kym-cdn.com/entries/icons/original/000/009/803/spongebob-squarepants-patrick-spongebob-patrick-star-background-225039.jpg" className="img-fluid" alt="" />
+                <img src="https://res.cloudinary.com/dzgtndwwd/image/upload/v1669991250/avatar/tegar_fnkfxb.jpg" className="img-fluid" alt="" />
                 <h4>Tegar Risqy Ys</h4>
                 <span>Front-End Development</span>
                 <div className="social">

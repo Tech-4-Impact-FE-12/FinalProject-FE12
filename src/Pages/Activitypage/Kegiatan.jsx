@@ -35,7 +35,7 @@ const Kegiatan = () => {
                     <img id="imgKegiatan" src={item.img_kegiatan} alt="imgKegiatan" />
                   </div>
                   <div className="col-sm leftContent text-end">
-                    <h4 className="">{item.judul_kegiatan}</h4>
+                    <h4 className="judulKegiatan">{item.judul_kegiatan}</h4>
                     <div className="buttonKegiatan">
                     <Link to={`/detail/${item._id}`}>
                       <button className="buttonCard">Lihat Kegiatan</button>

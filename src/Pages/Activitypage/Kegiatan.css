@@ -10,6 +10,8 @@
   padding: 1rem;
 }
 
+
+
 #imgKegiatan {
   width: 120px;
   border: 5px solid #ffffff;
@@ -51,12 +53,17 @@
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
+  text-decoration: none;
 }
 
 .buttonCard:hover,
 .buttonCard:focus {
   background-color: #1a8179;
   color: #ffffff;
+}
+
+.judulKegiatan {
+  max-width: 900px;
 }
 
 .buttonCard:active {
