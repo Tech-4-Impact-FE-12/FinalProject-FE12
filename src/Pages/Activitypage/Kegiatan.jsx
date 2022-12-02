@@ -32,7 +32,7 @@ const Kegiatan = () => {
               <div className="card-body">
                 <div className="row cardContent d-flex justify-content-between">
                   <div className="col-sm">
-                    <img id="imgKegiatan" src="https://i.ibb.co/6rf0qGd/Images-Kegiatan.png" alt="imgKegiatan" />
+                    <img id="imgKegiatan" src={item.img_kegiatan} alt="imgKegiatan" />
                   </div>
                   <div className="col-sm leftContent text-end">
                     <h4 className="">{item.judul_kegiatan}</h4>
