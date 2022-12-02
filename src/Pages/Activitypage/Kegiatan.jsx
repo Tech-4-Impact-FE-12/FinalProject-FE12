@@ -38,7 +38,7 @@ const Kegiatan = () => {
                     <h4 className="judulKegiatan">{item.judul_kegiatan}</h4>
                     <div className="buttonKegiatan">
                     <Link to={`/detail/${item._id}`}>
-                      <button className="buttonCard">Lihat Kegiatan</button>
+                      <button className="buttonCard">Lihat Artikel</button>
                       </Link>
                     </div>
                   </div>
