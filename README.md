@@ -14,7 +14,7 @@ Tim FEBE-12 mendapatkan Challenge Partner dari Greenpeace yang merupakan sebuah 
 
 ### Design
 
-- Mockup : [Mockup Link](https://www.figma.com/file/DYlnrmaQHc4yeqTVaoMVBO/Final-Design-FEBE-12?node-id=520%3A72)
+- Mockup : [Mockup Link](https://www.figma.com/file/9UbdZObGEevzRTBTW0X6ba/GreenPeace---FEBE-12?node-id=353%3A1698&t=UEEWG7vbEKYkoEKY-1)
 - Wireframes (Whimsical) : [Wireframes Link](https://whimsical.com/wireframe-KxP6N9tcbt3adyeHSZcrmw)
 
 ## User Features
